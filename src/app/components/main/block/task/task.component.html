@@ -1,0 +1,10 @@
+<div class="task" [ngClass]="isDone ? 'task-done' : ''">
+  <p class="task__title">{{title}}</p>
+  <div class="options">
+    <p (click)="toggleOptionsVisibility()" class="options__ellipsis">...</p>
+    <div class="options__options" [ngClass]="invisibleOptions ? 'inv' : ''">
+      <button (click)="markTaskAsDone()">Marcar tarefa como concluída</button>
+      <button (click)="deleteTask()">Excluir tarefa</button>
+    </div>
+  </div>
+</div>

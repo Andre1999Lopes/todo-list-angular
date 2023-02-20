@@ -1,0 +1,15 @@
+main {
+  padding: 2em;
+}
+
+.block-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  flex-wrap: wrap;
+  gap: 2em;
+
+  * {
+    width: 20%;
+  }
+}

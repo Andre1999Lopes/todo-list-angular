@@ -1,0 +1,21 @@
+<div class="block">
+  <h2>{{title}}</h2>
+  <div class="options" [ngClass]="invisibleTaskCreationOptions ? 'inv' : ''">
+    <div class="options__options">
+      <input #newTask type="text" class="createTask__input" placeholder="Nome da tarefa">
+      <button (click)="addTask(newTask.value); newTask.value=''; reset()" class="createTask__button">Adicionar</button>
+      <button (click)="reset(); newTask.value = ''" class="createTask__button">Cancelar</button>
+    </div>
+  </div>
+  <div class="options">
+    <p class="options__ellipsis" (click)="toggleBlockOptionsVisibility()">...</p>
+    <div class="options__options" [ngClass]="invisibleBlockOptions ? 'inv' : ''">
+      <button (click)="toggleTaskOptionsVisibility()">Adicionar tarefa</button>
+      <button (click)="deleteBlock()">Excluir bloco</button>
+    </div>
+  </div>
+
+  <div *ngFor="let task of taskList">
+    <app-task (deleteTaskEvent)="removeTask($event)" [title]="task"></app-task>
+  </div>
+</div>

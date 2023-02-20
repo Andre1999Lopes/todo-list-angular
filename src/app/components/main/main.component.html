@@ -1,0 +1,6 @@
+<main>
+  <app-form (blockEvent)="addBlock($event)"></app-form>
+  <section class="block-section">
+    <app-block (deleteBlockEvent)="removeBlock($event)" *ngFor="let block of blockList" [title]="block"></app-block>
+  </section>
+</main>

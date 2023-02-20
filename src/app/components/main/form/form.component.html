@@ -1,0 +1,4 @@
+<section>
+  <input (keyup.enter)="emitBlock(newBlock.value); newBlock.value=''" #newBlock class="form__input" type="text" placeholder="Nome do bloco de tarefas"/>
+  <button (click)="emitBlock(newBlock.value); newBlock.value=''" type="button" class="form__button">Adicionar bloco</button>
+</section>

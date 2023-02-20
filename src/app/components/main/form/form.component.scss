@@ -1,0 +1,31 @@
+.form__input,
+.form__button {
+  display: block;
+}
+
+.form__input {
+  width: 30%;
+  background-color: var(--white);
+  margin: 0 auto;
+  padding: 1em;
+  border-radius: 12px;
+  outline: none;
+  transition: all 100ms linear;
+
+  &:focus {
+    background-color: var(--focus);
+  }
+}
+
+.form__button {
+  margin: 2em auto 0;
+  padding: 0.5em 1em;
+  border-radius: 12px;
+  transition: all 200ms linear;
+  background-color: var(--white);
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--hover);
+  }
+}
