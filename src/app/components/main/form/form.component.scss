@@ -29,3 +29,9 @@
     background-color: var(--hover);
   }
 }
+
+@media screen and (max-width: 700px) {
+  .form__input {
+    width: 90%;
+  }
+}
